@@ -1,0 +1,68 @@
+.page { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+.wordmark { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 2.5rem; }
+.rule { flex: 1; height: 0.5px; background: var(--gold-rule); opacity: 0.4; }
+.wordmarkText { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.18em; color: var(--gold); white-space: nowrap; }
+
+.hero { text-align: center; margin-bottom: 2.75rem; }
+.h1 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 300; line-height: 1.2; color: var(--charcoal); margin-bottom: 0.6rem; }
+.h1 em { font-style: italic; color: var(--gold); }
+.goldBar { width: 32px; height: 1px; background: var(--gold); margin: 1.25rem auto; }
+.heroSub { font-size: 14px; color: var(--mid); line-height: 1.75; max-width: 420px; margin: 0 auto; }
+
+.card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.75rem; margin-bottom: 1.25rem; }
+.cardGold { border-color: var(--gold-border); }
+.secLabel { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
+
+.twoCol { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.expGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.chip { padding: 8px 6px; border: 0.5px solid var(--border); border-radius: 8px; background: var(--white); cursor: pointer; font-size: 12px; color: var(--mid); text-align: center; transition: all 0.2s; line-height: 1.4; }
+.chip:hover { border-color: var(--gold-border); color: var(--charcoal); }
+.chipOn { background: var(--gold) !important; color: white !important; border-color: var(--gold) !important; }
+
+.pills { display: flex; flex-wrap: wrap; gap: 7px; }
+.pill { padding: 8px 16px; border: 0.5px solid var(--border); border-radius: 20px; background: var(--white); cursor: pointer; font-size: 13px; color: var(--mid); transition: all 0.2s; }
+.pill:hover { border-color: var(--gold-border); color: var(--charcoal); }
+.pillOn { background: var(--gold-light) !important; color: var(--gold) !important; border-color: var(--gold-border) !important; }
+
+.angleGuide { background: var(--surface); border: 0.5px solid var(--gold-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+.angleTitle { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.85rem; }
+.angleLayout { display: flex; align-items: flex-start; gap: 16px; }
+.anglePoints { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.anglePoint { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--mid); line-height: 1.5; }
+.angleDot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); margin-top: 6px; flex-shrink: 0; }
+
+.uploadZone { border: 1px dashed rgba(184,149,42,0.3); border-radius: 12px; padding: 2rem; text-align: center; cursor: pointer; background: var(--gold-light); transition: all 0.2s; }
+.uploadZone:hover { border-color: var(--gold); background: #F0E4C4; }
+.uploadIconWrap { width: 40px; height: 40px; border-radius: 50%; background: white; border: 0.5px solid var(--gold-border); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: var(--gold); }
+.uploadTitle { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 3px; }
+.uploadSub { font-size: 12px; color: var(--mid); }
+.uploadBadge { display: inline-block; margin-top: 10px; font-size: 11px; padding: 3px 11px; border-radius: 20px; background: white; color: var(--gold); border: 0.5px solid var(--gold-border); letter-spacing: 0.04em; }
+
+.fileRow { display: flex; align-items: center; gap: 12px; padding: 12px 13px; background: var(--gold-light); border-radius: 10px; border: 0.5px solid var(--gold-border); }
+.fileIcon { width: 32px; height: 32px; border-radius: 8px; background: var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.fileMeta { flex: 1; min-width: 0; }
+.fileName { font-size: 13px; font-weight: 500; color: var(--charcoal); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fileSize { font-size: 11px; color: var(--mid); }
+.rmBtn { width: 24px; height: 24px; border-radius: 50%; background: white; border: 0.5px solid var(--border); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.confirmBlock { background: var(--gold-light); border-radius: 10px; padding: 13px 15px; margin-bottom: 1rem; border: 0.5px solid var(--gold-border); }
+.confirmRow { display: flex; justify-content: space-between; padding: 5px 0; font-size: 13px; border-bottom: 0.5px solid rgba(184,149,42,0.15); }
+.confirmRow:last-child { border-bottom: none; }
+.confirmKey { color: var(--subtle); }
+.confirmVal { color: var(--charcoal); font-weight: 500; text-align: right; max-width: 62%; }
+.confirmNote { font-size: 13px; color: var(--mid); line-height: 1.75; }
+
+.btnPrimary { width: 100%; padding: 13px; border-radius: 9px; background: var(--charcoal); color: white; border: none; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.btnPrimary:hover { background: #2e2e2e; }
+.btnPrimary:disabled { background: var(--subtle); cursor: not-allowed; }
+.btnGhost { padding: 13px 18px; border-radius: 9px; background: white; color: var(--charcoal); border: 0.5px solid var(--border); font-size: 14px; cursor: pointer; transition: all 0.2s; }
+.btnGhost:hover { border-color: var(--gold-border); }
+.btnRow { display: flex; gap: 10px; margin-top: 0.25rem; }
+
+.errorBanner { background: var(--danger-bg); color: var(--danger); border: 0.5px solid rgba(163,45,45,0.3); border-radius: 8px; padding: 10px 14px; font-size: 13px; margin-bottom: 1rem; }
+
+.trustRow { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.trustItem { font-size: 11px; color: var(--subtle); display: flex; align-items: center; gap: 5px; }
+.trustDot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold-border); }

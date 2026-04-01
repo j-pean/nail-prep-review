@@ -1,7 +1,9 @@
 -- Run this in your Supabase SQL editor (supabase.com > your project > SQL Editor)
 
 -- Submissions table
-create table submissions (
+create extension if not exists pgcrypto;
+
+create table if not exists submissions (
   id uuid default gen_random_uuid() primary key,
   created_at timestamp with time zone default now(),
   first_name text not null,

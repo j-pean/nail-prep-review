@@ -72,15 +72,29 @@ export default function Home() {
 
       if (dbErr) throw dbErr
 
-      await fetch('/api/notify', {
+      const notifyRes = await fetch('/api/notify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: `${form.firstName} ${form.lastName}`, email: form.email, issues: form.issues })
       })
 
+      if (!notifyRes.ok) {
+        let detail = ''
+        try {
+          const j = await notifyRes.json()
+          detail = j?.error ? ` (${j.error})` : ''
+        } catch {}
+        throw new Error(`Notification failed${detail}`)
+      }
+
       setDone(true)
     } catch (e) {
-      setError('Something went wrong. Please try again.')
+      const msg =
+        e?.message ||
+        e?.error_description ||
+        (typeof e === 'string' ? e : '') ||
+        'Something went wrong. Please try again.'
+      setError(msg)
       console.error(e)
     } finally {
       setUploading(false)

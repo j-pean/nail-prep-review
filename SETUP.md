@@ -40,16 +40,8 @@ Everything is built. Follow these steps in order and you'll be live in about 30 
 
 1. Go to **vercel.com** → create a free account
 2. Click "Add New Project" → "Import Git Repository"
-3. Push this folder to a GitHub repo first:
-   ```
-   cd nail-prep-review
-   git init
-   git add .
-   git commit -m "initial"
-   gh repo create nail-prep-review --private --push --source=.
-   ```
-   (install GitHub CLI at cli.github.com if needed)
-4. Import the repo in Vercel
+3. Push this repo to GitHub (`git init` / `git add` / `git commit` / `git push` as needed).
+4. Import the repo in Vercel. Leave **Root Directory** empty (the Next.js app is at the repository root).
 5. In Vercel project settings → **Environment Variables** → add all of these:
 
 | Key | Value |

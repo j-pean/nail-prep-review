@@ -1,4 +1,5 @@
 import { Resend } from 'resend'
+import twilio from 'twilio'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end()
@@ -9,7 +10,7 @@ export default async function handler(req, res) {
     // Email via Resend
     const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
-      from: 'Nail Prep Review <notifications@yourdomain.com>',
+      from: 'Nail Prep Review <onboarding@resend.dev>',
       to: process.env.YOUR_EMAIL,
       subject: `New submission from ${name}`,
       html: `
@@ -29,8 +30,8 @@ export default async function handler(req, res) {
     })
 
     // SMS via Twilio
-    const twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
-    await twilio.messages.create({
+    const sms = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
+    await sms.messages.create({
       body: `New nail prep submission from ${name} (${issues?.join(', ') || 'no issues flagged'}). Open your dashboard to review.`,
       from: process.env.TWILIO_PHONE_NUMBER,
       to: process.env.YOUR_PHONE,

@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     // Email feedback to tech
     const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
-      from: 'Nail Prep Review <feedback@yourdomain.com>',
+      from: 'Nail Prep Review <onboarding@resend.dev>',
       to: techEmail,
       subject: `Your nail prep feedback is ready`,
       html: buildFeedbackEmail(techName, timestamps, overallFeedback, rating),
